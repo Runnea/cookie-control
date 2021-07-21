@@ -1,20 +1,24 @@
 <template>
   <client-only>
     <section class="cookieControl" v-if="cookies.text">
-      <transition :name="`cookieControl__Bar--${cookies.barPosition}`">
-        <div :class="`cookieControl__Bar cookieControl__Bar--${cookies.barPosition}`" v-if="colorsSet && !cookies.consent">
-          <div class="cookieControl__BarContainer">
-            <div>
-              <slot name="bar">
-                <h3 v-text="cookies.text.barTitle"/>
-                <p v-text="cookies.text.barDescription"/>
-              </slot>
+      <transition :name="`cookieControl__BarBackground`" v-if="colorsSet && !cookies.consent">
+        <div class="cookieControl__BarBackground">
+          <transition :name="`cookieControl__Bar--${cookies.barPosition}`">
+            <div :class="`cookieControl__Bar cookieControl__Bar--${cookies.barPosition}`">
+              <div class="cookieControl__BarContainer">
+                <div>
+                  <slot name="bar">
+                    <h3 v-text="cookies.text.barTitle"/>
+                    <p v-text="cookies.text.barDescription"/>
+                  </slot>
+                </div>
+                <div class="cookieControl__BarButtons">
+                  <button @click="cookies.modal = true" v-text="cookies.text.manageCookies"/>
+                  <button @click="setConsent({reload: false})" v-text="cookies.text.acceptAll"/>
+                </div>
+              </div>
             </div>
-            <div class="cookieControl__BarButtons">
-              <button @click="cookies.modal = true" v-text="cookies.text.manageCookies"/>
-              <button @click="setConsent({reload: false})" v-text="cookies.text.acceptAll"/>
-            </div>
-          </div>
+          </transition>
         </div>
       </transition>
       <button class="cookieControl__ControlButton" aria-label="Cookie control" v-if="cookies.controlButton && colorsSet && cookies.consent" @click="cookies.modal = true">

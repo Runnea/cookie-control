@@ -1,11 +1,15 @@
 //Transitions
 .cookieControl__Modal-enter-active,
-.cookieControl__Modal-leave-active {
+.cookieControl__Modal-leave-active,
+.cookieControl__BarBackground-enter-active,
+.cookieControl__BarBackground-leave-active {
   transition: opacity .25s;
 }
 
 .cookieControl__Modal-enter,
-.cookieControl__Modal-leave-to {
+.cookieControl__Modal-leave-to,
+.cookieControl__BarBackground-enter,
+.cookieControl__BarBackground-leave-to {
   opacity: 0;
 }
 
@@ -67,6 +71,17 @@
     backface-visibility: hidden;
     transition: background-color 200ms, color 200ms;
   }
+}
+
+.cookieControl__BarBackground{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  font-size: 0;
+  background-color: #00000080;
 }
 
 .cookieControl__Bar{

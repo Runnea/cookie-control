@@ -1,9 +1,10 @@
 # Nuxt Cookie Control
-![Nuxt Cookie Control](https://drive.google.com/a/broj42.com/uc?id=1FGQVyj2s0OT-gpTYxH_FuQhe6oU9iejW)
+![Nuxt Cookie Control](https://drive.google.com/a/.com/uc?id=1FGQVyj2s0OT-gpTYxH_FuQhe6oU9iejW)
 #### 
-Try it out here:
-[Nuxt.js Cookie Control](https://codesandbox.io/s/vkwqmm577)
 
+Based on broj42's Nuxt Cookie Control module
+Check it out here:
+[Nuxt.js Cookie Control](https://npmjs.com/package/nuxt-cookie-control)
 ## 🚀 Usage
 ```bash
 npm i nuxt-cookie-control
@@ -265,17 +266,3 @@ text: {
   barTitle: 'Override Title'
 }
 ```
-
-### Buy me a coffee
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F31MWWL)
-
-
-<!-- Badges -->
-[npm-version-src]: https://badgen.net/npm/v/nuxt-cookie-control/latest
-[npm-version-href]: https://npmjs.com/package/nuxt-cookie-control
-
-[kofi-src]: https://badgen.net/badge/icon/kofi?icon=kofi&label=support
-[kofi-href]: https://ko-fi.com/darioferderber
-
-[npm-downloads-src]: https://badgen.net/npm/dm/nuxt-cookie-control
-[npm-downloads-href]: https://npmjs.com/package/nuxt-cookie-control
