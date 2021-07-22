@@ -59,7 +59,7 @@
               <div class="cookieControl__ModalButtons">
                 <button @click="setConsent({type: 'partial'})" v-text="cookies.text.save"/>
                 <button @click="setConsent" v-text="cookies.text.acceptAll"/>
-                <button @click="setConsent({declineAll: true})" v-text="cookies.text.declineAll"/>
+                <!-- <button @click="setConsent({declineAll: true})" v-text="cookies.text.declineAll"/> -->
               </div>
             </div>
           </div>
