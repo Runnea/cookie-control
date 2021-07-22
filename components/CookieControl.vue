@@ -34,24 +34,26 @@
               <template v-for="type in ['necessary', 'optional']">
                 <h3 v-text="cookies.text[type]" :key="type.id"/>
                 <ul :key="type.id">
-                  <li v-for="cookie in cookies[type]" :key="cookie.id">
-                    <div class="cookieControl__ModalInputWrapper">
-                      <input v-if="type === 'necessary' && cookie.name !== 'functional'" :id="getCookieFirstName(cookie.name)" type="checkbox" disabled checked/>
-                      <input v-else :id="getCookieFirstName(cookie.name)" type="checkbox" :checked="cookies.enabledList.includes(cookie.identifier || cookies.slugify(getCookieFirstName(cookie.name))) || (cookies.get('cookie_control_consent').length === 0 && cookie.initialState === true)" @change="toogleCookie(cookie)"/>
-                      <label :for="getCookieFirstName(cookie.name)" v-html="getName(cookie.name)"/>
-                      <span class="cookieControl__ModalCookieName">
-                        {{ getName(cookie.name) }}
-                        <span v-if="cookie.description" v-html="getDescription(cookie.description)"/>
-                      </span>
-                    </div>
-                    <template v-if="cookie.cookies">
-                      <slot name="cookie" v-bind="{config: cookie}">
-                        <ul>
-                          <li v-for="item in cookie.cookies" :key="item.id" v-html="item"/>
-                        </ul>
-                      </slot>
-                    </template>
-                  </li>
+                  <template v-for="cookie in cookies[type]">
+                    <li v-if="type === 'necessary' || cookie.enabled" :key="cookie.id">
+                      <div class="cookieControl__ModalInputWrapper">
+                        <input v-if="type === 'necessary' && cookie.name !== 'functional'" :id="getCookieFirstName(cookie.name)" type="checkbox" disabled checked/>
+                        <input v-else :id="getCookieFirstName(cookie.name)" type="checkbox" :checked="cookies.enabledList.includes(cookie.identifier || cookies.slugify(getCookieFirstName(cookie.name))) || (cookies.get('cookie_control_consent').length === 0 && cookie.initialState === true)" @change="toogleCookie(cookie)"/>
+                        <label :for="getCookieFirstName(cookie.name)" v-html="getName(cookie.name)"/>
+                        <span class="cookieControl__ModalCookieName">
+                          {{ getName(cookie.name) }}
+                          <span v-if="cookie.description" v-html="getDescription(cookie.description)"/>
+                        </span>
+                      </div>
+                      <template v-if="cookie.cookies">
+                        <slot name="cookie" v-bind="{config: cookie}">
+                          <ul>
+                            <li v-for="item in cookie.cookies" :key="item.id" v-html="item"/>
+                          </ul>
+                        </slot>
+                      </template>
+                    </li>
+                  </template>
                 </ul>
               </template>
               <div class="cookieControl__ModalButtons">
@@ -105,7 +107,7 @@ export default {
 
     setConsent({type, consent=true, reload=true, declineAll=false}){
       this.cookies.set({name: 'cookie_control_consent', value: consent, expires: this.expirationDate});
-      let enabledCookies = declineAll ? [] : type === 'partial' && consent ? this.cookies.enabledList : [...this.optionalCookies.map(c => c.identifier || this.cookies.slugify(this.getCookieFirstName(c.name)))];
+      let enabledCookies = declineAll ? [] : type === 'partial' && consent ? this.cookies.enabledList : [...this.optionalCookies.filter(c => c.enabled).map(c => c.identifier || this.cookies.slugify(this.getCookieFirstName(c.name)))];
       this.cookies.set({name: 'cookie_control_enabled_cookies', value: consent ? enabledCookies.join(',') : '', expires: this.expirationDate});
       if(!reload){
         this.cookies.setConsent()

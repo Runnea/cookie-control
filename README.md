@@ -212,7 +212,7 @@ cookies: {
       },
       //else
       description:  'Google GTM is...',
-
+      enabled: true, //Set to false if you want to discart this cookie
       initialState: true,
       src:  'https://www.googletagmanager.com/gtag/js?id=<API-KEY>',
       async:  true,
