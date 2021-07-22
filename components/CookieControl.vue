@@ -10,6 +10,7 @@
                   <slot name="bar">
                     <h3 v-text="cookies.text.barTitle"/>
                     <p v-text="cookies.text.barDescription"/>
+                    <nuxt-link class="cookiePolicy" :to="$cookies.cookiePolicy" target="_blank">{{$cookies.text.cookiePolicy}}</nuxt-link>
                   </slot>
                 </div>
                 <div class="cookieControl__BarButtons">

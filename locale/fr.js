@@ -1,6 +1,6 @@
 export default {
   barTitle: "Cookies",
-  barDescription: "Nous utilisons des cookies d’origine et des cookies tiers. Ces cookies sont destinés à vous offrir une navigation optimisée sur ce site web et de nous donner un aperçu de son utilisation, en vue de l’amélioration des services que nous offrons. En poursuivant votre navigation, nous considérons que vous acceptez l’usage des cookies.",
+  barDescription: "Nous utilisons nos propres cookies pour conserver l’identification des utilisateurs enregistrés et pour pouvoir personnaliser les services et des cookies analytiques de tiers pour les statistiques sur les pages consultées, mais toujours de manière anonyme.",
   acceptAll: "Tous accepter",
   declineAll: "Tout refuser",
   manageCookies: "Gérer les cookies",
@@ -12,4 +12,5 @@ export default {
   functional: "Cookies fonctionnels",
   blockedIframe: "Pour voir cela, veuillez activer les cookies fonctionnels",
   here: "ici",
-};
+  cookiePolicy: "Politique de cookies"
+}

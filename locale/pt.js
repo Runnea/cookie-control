@@ -11,5 +11,6 @@ export default {
   optional: 'Cookies opcionais',
   functional: 'Cookies funcionais',
   blockedIframe: 'Para visualizar isto, por favor, active os cookies funcionais',
-  here: 'aqui'
+  here: 'aqui',
+  cookiePolicy: 'Cookie Policy'
 }

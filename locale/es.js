@@ -1,15 +1,16 @@
 export default {
-  barTitle: 'Cookies',
-  barDescription: 'Utilizamos cookies propias y de terceros para poder mostrarle una página web y comprender cómo la utiliza, con el fin de mejorar los servicios que ofrecemos. Si continúa navegando, consideramos que acepta su uso.',
-  acceptAll: 'Aceptar todo',
-  declineAll: 'Borrar todo',
-  manageCookies: 'Administrar cookies',
-  unsaved: 'Tienes configuraciones no guardadas',
+  barTitle: 'Privacidad y Cookies',
+  barDescription: 'Utilizamos cookies propias para mantener identificados a los usuarios registrados y poder personalizar los servicios y cookies de terceros analíticas para estadísticas de las páginas vistas pero siempre de una forma anónima.',
+  acceptAll: 'Aceptar todas',
+  declineAll: 'Rechazar todas',
+  manageCookies: 'Configurar cookies',
+  unsaved: 'Tienes ajustes no guardados',
   close: 'Cerrar',
-  save: 'Guardar',
-  necessary: 'Cookies obligatorias',
+  save: 'Guardar selección',
+  necessary: 'Cookies necesarias',
   optional: 'Cookies opcionales',
   functional: 'Cookies funcionales',
-  blockedIframe: 'Para ver esto, por favor habilita las cookies funcionales.',
-  here: 'aquí'
+  blockedIframe: 'Para ver esto, active las cookies funcionales',
+  here: 'aquí',
+  cookiePolicy: 'Política de cookies'
 }

@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   barTitle: 'Kolačići',
   barDescription: 'Koristimo vlastite kolačiće i kolačiće treće strane kako bismo Vam mogli prikazati web stranicu i razumijeti kako je koristite, s pogledom na poboljšanje usluga koje nudimo. Ako nastavite s pregledavanjem, smatramo da prihvaćate upotrebu kolačića.',
   acceptAll: 'Dozvoli sve',
@@ -11,5 +11,6 @@ export default {
   optional: 'Neobavezni kolačići',
   functional: 'Funkcionalni kolačići',
   blockedIframe: 'Da bi vidjeli ovo, molimo Vas omogućite funkcionalne kolačiće',
-  here: 'ovdje'
+  here: 'ovdje',
+  cookiePolicy: 'Cookie Policy'
 }

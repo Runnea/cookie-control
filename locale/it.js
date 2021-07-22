@@ -1,6 +1,6 @@
 export default {
   barTitle: 'Cookies',
-  barDescription: 'Utilizziamo cookie propri e di terzi per mostrarvi la pagina web e capire come la utilizzate, nonché per migliorare i servizi che offriamo. Se continuate a navigare, consideriamo che accettate il loro utilizzo.',
+  barDescription: 'Utilizziamo i cookie per mantenere identificati gli utenti registrati e per poter personalizzare i servizi e i cookie analitici di terzi per le statistiche sulle visualizzazioni delle pagine, ma sempre in modo anonimo.',
   acceptAll: 'Accetta tutto',
   declineAll: 'Cancella tutto',
   manageCookies: 'Gestisci i cookie',
@@ -11,5 +11,6 @@ export default {
   optional: 'Cookie opzionali',
   functional: 'Cookie funzionali',
   blockedIframe: 'Per vedere questo, si prega di abilitare i cookie funzionali',
-  here: 'qui'
+  here: 'qui',
+  cookiePolicy: 'Politica dei cookie'
 }
