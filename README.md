@@ -146,6 +146,7 @@ modules: [
       checkboxActiveCircleBackground: '#fff',
       checkboxInactiveCircleBackground: '#fff',
       checkboxDisabledCircleBackground: '#fff',
+      barCookiePolicy: '#fff',
     },
 
     //default texts
