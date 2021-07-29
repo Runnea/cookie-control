@@ -113,6 +113,7 @@ export default {
       if(!reload){
         this.cookies.setConsent()
         this.$cookies.modal = false;
+        this.$nuxt.refresh();
       } else window.location.reload(true);
     },
 
